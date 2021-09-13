@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>TodoList</title>
+	 <!-- <link rel="stylesheet" href="css/style.css"> -->
+</head>
+<body>
+	<header class="full-width NavBarP">
+		<div class="full-width NavBarP-Logo"> TodoList
+             </div>
+		
+		<!-- Modo oscuro -->
+	</header>
+
+	<section class="banner">
+		<div class="banner-content">
+			<h1>Organiza tu vida</h1>
+		</div>
+	</section>
+
+	<article>
+
+		<form id="app">
+			 <input type="datetime-local" name="fecha"> 
+			<input type="text" name="descripcion" placeholder="Introduzca una descripcion">
+			<input type="submit" name="enviar">
+
+		</form>
+
+	</article>
+
+	<div class="nes-table-responsive">
+        <table class=" todos-table">
+            <tr>
+              <th>Fecha y Hora </th>
+              <th> Descripcion </th>
+            </tr>
+        </table>
+      </div>
+
+	<script src="Script/main.js" ></script>
+
+</body>
+</html>
