@@ -1,19 +1,19 @@
 const datos = [];
 const $myFormulario = document.getElementById("app");
-const $tabla =  document.getElementById("table");
+const $tabla = document.getElementById("table");
+
+console.log(sessionStorage);
 
 const dibujarTabla = function () {
-  
-    let nodos = "";
+  let nodos = "";
 
-    datos.forEach((dato) => {
-      nodos += "<tr>";
-      nodos += '<td>FECHA: ${dato.fecha}</td><td> DESCRIPCION: ${dato.descripcion}</td>';
-      nodos += "</tr>"
-    
-});
+  datos.forEach((dato) => {
+    nodos += "<tr>";
+    nodos += `<td>FECHA: ${dato.fecha}</td><td>DESCRIPTION: ${dato.descripcion}</td>`;
+    nodos += "</tr>";
+  });
 
-$tabla.innerHTML = nodos;
+  $tabla.innerHTML = nodos;
 };
 
 $myFormulario.addEventListener("submit", function (event) {
