@@ -1,8 +1,19 @@
 const datos = [];
 const $myFormulario = document.getElementById("app");
+const $tabla =  document.getElementById("table");
 
 const dibujarTabla = function () {
-  $myFormulario.innerHTML = JSON.stringify(datos)
+  
+    let nodos = "";
+
+    datos.forEach((dato) => {
+      nodos += "<tr>";
+      nodos += '<td>FECHA: ${dato.fecha}</td><td> DESCRIPCION: ${dato.descripcion}</td>';
+      nodos += "</tr>"
+    
+});
+
+$tabla.innerHTML = nodos;
 };
 
 $myFormulario.addEventListener("submit", function (event) {
@@ -11,8 +22,7 @@ $myFormulario.addEventListener("submit", function (event) {
   const $miInput1 = document.querySelector('input[name="fecha"]');
   const $miInput2 = document.querySelector('input[name="descripcion"]');
 
-  datos.push({ fecha: $miInput1.value });
-  datos.push({ descripcion: $miInput2.value });
+  datos.push({ fecha: $miInput1.value, descripcion: $miInput2.value });
 
   dibujarTabla();
 
