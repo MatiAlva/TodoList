@@ -8,9 +8,17 @@ const dibujarTabla = function () {
   let nodos = "";
 
   datos.forEach((dato) => {
-    nodos += "<tr>";
-    nodos += `<td>FECHA: ${dato.fecha}</td><td>DESCRIPTION: ${dato.descripcion}</td>`;
-    nodos += "</tr>";
+nodos += `
+<div class="card text-dark bg-light mb-3" style="margin:15px">
+  <div class="card-header">Todo List</div>
+  <div class="card-body"> 
+      <h5 class="card-title">Info card title</h5>
+      <p class="card-text"> FECHA Y HORA: ${dato.fecha} </p>
+      <p class="card-text"> Descripcion: ${dato.descripcion} </p>
+  </div>
+</div>
+`;
+
   });
 
   $tabla.innerHTML = nodos;
